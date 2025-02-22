@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "@babel/preset-env", 
+    // This { "runtime": "automatic" } helps transpile jsx with new transpiler of babel.
+
+    /**
+      Starting from React 17, React introduced the new JSX transform. 
+      With this, JSX no longer compiles to React.createElement(), 
+      but instead uses functions from react/jsx-runtime (_jsx and _jsxs), 
+      which are automatically imported.
+
+      const element = <h1>Hello, World!</h1>; 
+      
+      was compiled to:
+      const element = React.createElement("h1", null, "Hello, World!");
+
+      But now after React 17 it compiles to:
+      import { jsx as _jsx } from "react/jsx-runtime";
+      const element = _jsx("h1", { children: "Hello, World!" });
+    */
+    ["@babel/preset-react", { "runtime": "automatic" }]  
+  ]
+}
