@@ -1,3 +1,6 @@
+# What
+This project demonstrates how to setup a nodejs, expressjs and reactjs monolith application. 
+
 #### Node Version
   - Required Node version 20
 
