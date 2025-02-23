@@ -1,0 +1,11 @@
+.homepage {
+  font-family: Arial, sans-serif;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
